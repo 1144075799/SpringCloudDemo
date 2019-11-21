@@ -2,12 +2,18 @@ package com.mysqlSpringCould.controller;
 
 
 import com.mysqlSpringCould.pojo.User;
+import com.netflix.appinfo.InstanceInfo;
+import com.netflix.discovery.EurekaClient;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class UserController {
+
+    @Autowired
+    private EurekaClient eurekaClient;
 
 
 
@@ -16,11 +22,11 @@ public class UserController {
         return new User(id);
     }
 
-//    @GetMapping("/getInfo")
-//    public String info(){
-//        InstanceInfo instanceInfo=eurekaClient.getNextServerFromEureka("provider_user",false);
-//        return instanceInfo.getHomePageUrl();
-//    }
+    @GetMapping("/getInfo")
+    public String info(){
+        InstanceInfo instanceInfo=eurekaClient.getNextServerFromEureka("provider-user",false);
+        return instanceInfo.getHomePageUrl();
+    }
 
     @GetMapping("/get-user")
     public User getUser(User user){
