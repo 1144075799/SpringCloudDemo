@@ -5,22 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.mysqlSpringCould</groupId>
-  <artifactId>demo</artifactId>
-  <packaging>pom</packaging>
+  <artifactId>consumer-order</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <modules>
-    <module>provider_user</module>
-    <module>consumer-order</module>
-  </modules>
 
-  <!--将当前项目申明为SpringBoot项目-->
-  <parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>1.5.10.RELEASE</version>
-  </parent>
-
-  <name>demo</name>
+  <name>consumer-order</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -38,18 +26,12 @@
       <scope>test</scope>
     </dependency>
 
-    <!--SpringBoot依赖-->
     <dependency>
-      <groupId>ch.qos.logback</groupId>
-      <artifactId>logback-core</artifactId>
-      <version>1.2.3</version>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <version>1.5.10.RELEASE</version>
     </dependency>
 
-    <dependency>
-      <groupId>ch.qos.logback</groupId>
-      <artifactId>logback-classic</artifactId>
-      <version>1.2.3</version>
-    </dependency>
   </dependencies>
 
   <build>
