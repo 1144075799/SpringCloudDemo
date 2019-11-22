@@ -1,5 +1,6 @@
 package com.mysqlSpringCould;
 
+import com.TestConfig1;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -13,7 +14,7 @@ import org.springframework.web.client.RestTemplate;
  */
 @SpringBootApplication
 @EnableEurekaClient
-@RibbonClient("PROVIDER-USER")
+@RibbonClient(name = "PROVIDER-USER",configuration = TestConfig1.class)
 public class ConsumerOrderRibbon
 {
     @Bean   //相当于xml 中的 bean标签，主要用于调用当前方法获取到指定对象
