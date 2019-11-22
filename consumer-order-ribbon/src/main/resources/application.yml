@@ -1,0 +1,9 @@
+server:
+  port: 8901  #程序启动后的端口，也就是Tomcat的端口，我们也可以自己定义
+spring:
+  application:
+    name: provider-order-ribbon
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka
