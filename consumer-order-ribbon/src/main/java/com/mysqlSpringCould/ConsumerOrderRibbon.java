@@ -14,7 +14,8 @@ import org.springframework.web.client.RestTemplate;
  */
 @SpringBootApplication
 @EnableEurekaClient
-@RibbonClient(name = "PROVIDER-USER",configuration = TestConfig1.class)
+//@RibbonClient(name = "PROVIDER-USER",configuration = TestConfig1.class)
+@RibbonClient("PROVIDER-USER")
 public class ConsumerOrderRibbon
 {
     @Bean   //相当于xml 中的 bean标签，主要用于调用当前方法获取到指定对象
