@@ -26,11 +26,11 @@ public class OrderController {
         return user;
     }
 
-//    @GetMapping("/get_user")
-//    public User get_user(User user){
-//        User order=feignClient1.get_user(user);
-//        return order;
-//    }
+    @GetMapping("/get_user")
+    public User get_user(User user){
+        User order=feignClient1.get_user(user);
+        return order;
+    }
 
     @RequestMapping("/serviceinfo/{name}")
     public String getServiceInfo(@PathVariable String name){

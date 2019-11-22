@@ -8,5 +8,5 @@ eureka:
     service-url:
       defaultZone: http://localhost:9000/eureka
 logging:
-  level:
-    com.qianfengspringcloud.feign.FeignClient2: debug #给指定的feign 指定输出的日志级别，只有在debug的情况下才会打印数据
+      level:
+        com.mysqlSpringCould.feign.FeignClient2: debug #给指定的feign 指定输出的日志级别，只有在debug的情况下才会打印数据
