@@ -5,31 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.mysqlSpringCould</groupId>
-  <artifactId>demo</artifactId>
-  <packaging>pom</packaging>
+  <artifactId>consumer-hystrix-turbine</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <modules>
-    <module>provider_user</module>
-    <module>consumer-order</module>
-    <module>eureka_server</module>
-      <module>consumer-order-ribbon</module>
-      <module>consumer-order-feign</module>
-      <module>consumer-order-hystrix</module>
-      <module>consumer-order-hystrix-feign</module>
-      <module>consumer-order-hystrix-feign-factory</module>
-      <module>consumer-order-hystrix-feign-dashBoard</module>
-      <module>consumer-hystrix-turbine</module>
-      <module>consumer-hystrix-turbine</module>
-  </modules>
 
-  <!--将当前项目申明为SpringBoot项目-->
-  <parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>1.5.10.RELEASE</version>
-  </parent>
-
-  <name>demo</name>
+  <name>consumer-hystrix-turbine</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -39,19 +18,6 @@
     <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
 
-  <!--SpringCloud依赖-->
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-dependencies</artifactId>
-        <version>Finchley.RELEASE</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
-
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -60,18 +26,36 @@
       <scope>test</scope>
     </dependency>
 
-    <!--SpringBoot依赖-->
     <dependency>
-      <groupId>ch.qos.logback</groupId>
-      <artifactId>logback-core</artifactId>
-      <version>1.2.3</version>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <version>1.5.10.RELEASE</version>
     </dependency>
 
     <dependency>
-      <groupId>ch.qos.logback</groupId>
-      <artifactId>logback-classic</artifactId>
-      <version>1.2.3</version>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+      <version>1.4.3.RELEASE</version>
     </dependency>
+
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+      <version>1.4.3.RELEASE</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+      <version>1.4.3.RELEASE</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-netflix-turbine</artifactId>
+      <version>1.4.3.RELEASE</version>
+    </dependency>
+
   </dependencies>
 
   <build>
