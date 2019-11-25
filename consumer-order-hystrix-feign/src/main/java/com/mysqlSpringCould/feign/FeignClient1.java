@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-@FeignClient(name = "provider-user1",fallback = FeignClient1Hystrix.class)      //提供者名字
+@FeignClient(name = "provider-user",fallback = FeignClient1Hystrix.class)      //提供者名字
 public interface FeignClient1 {
 
     //@GetMapping("/user/{id}")
