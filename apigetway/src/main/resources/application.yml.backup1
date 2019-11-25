@@ -9,7 +9,3 @@ eureka:
       defaultZone: http://localhost:9000/eureka
   instance:
     prefer-ip-address: true   # 显示ip
-# 配置路由映射
-zuul:
-  routes:
-    provider-user:  /abc/** #给指定的服务做映射，比如当前是给provider-user 添加映射地址为/abc
