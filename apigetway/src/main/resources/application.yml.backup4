@@ -14,13 +14,4 @@ zuul:
   routes:
     abcdef: #随便写但是必须保证是唯一的
       path: /abcd/**  # 映射的路径
-      serviceId: provider-user
-ribbon:
-  eureka:
-    enabled: false # 在eureka中禁用ribbon的负载均衡
-
-provider-user:  #给serverId对应服务的名字指定一个 ribbon 的负载均衡 是从ListOfServer配置的地址中选择
-  ribbon:
-    listOfServers: http://192.168.4.13:7900/,http://192.168.4.13:7901/
-#    ReadTimeout: 60000
-#    ConnectTimeout: 60000
+      url: http://192.168.4.13:7900/  #给那个服务做映射
