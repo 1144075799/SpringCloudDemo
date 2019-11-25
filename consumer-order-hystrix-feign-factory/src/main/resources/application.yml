@@ -2,7 +2,7 @@ server:
   port: 8903  #程序启动后的端口，也就是Tomcat的端口，我们也可以自己定义
 spring:
   application:
-    name: provider-order-feign-hystrix-factory
+    name: consumer-order-feign-hystrix-factory
 eureka:
   client:
     service-url:

@@ -31,7 +31,7 @@ public class OrderController {
     })  //"execution.isolation.strategy" 默认不建议大家修改，如果大家遇到问题 在修改 否则不建议
     public User getOrder(@PathVariable Long id){
         //访问提供者，获取数据
-        InstanceInfo instanceInfo=eurekaClient.getNextServerFromEureka("provider-user1",false);
+        InstanceInfo instanceInfo=eurekaClient.getNextServerFromEureka("provider-user",false);
         String url=instanceInfo.getHomePageUrl();
 
         User user = restTemplate.getForObject(url+"/user/" + id, User.class);        //通过访问rest获取到json数据，然后转化成User
